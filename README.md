@@ -1,8 +1,34 @@
-# Layer Adaptive Out-of-Distribution detection for CS640
-LA-OOD implementation for the CS640 project.
+[![Contributors][contributors-shield]][contributors-url]
+[![Issues][issues-shield]][issues-url]
+[![Stars][stars-shield]][stars-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+
+<!-- Graphical abstract -->
+<br />
+<p align="center">
+    <img src="assets/layer_wise_features.jpg" alt="graphical abstract" width="700" height="200">
+
+  <h2 align="center">Layer Adaptive Out-of-Distribution detection for CS640</h2>
+
+  <p align="center">
+    Preliminary results of LA-OOD on in-distribution CIFAR10 and OOD Tiny ImageNet on VGG16 backbone.
+    <br />
+  </p>
+</p>
+<p align="center">
+  <img src="assets/main_idea.jpg" alt="Main concept">
+</p>
+
+
 
 # Team members
-GM Harshvardhan, Harshil Gandhi, Kathakoli Sengupta.
+## GM Harshvardhan
+- Email: [gmharsh@bu.edu](mailto:gmharsh@bu.edu)
+## Harshil Gandhi
+- Email: [harshilgandhi@bu.edu](mailto:harshilg@bu.edu)
+## Kathakoli Sengupta
+- Email: [ksg25@bu.edu](mailto:ksg25@bu.edu)
 
 # Overview
 
@@ -47,3 +73,13 @@ The above step trains all the One-Class SVMs (OCSVMs) to detect whether an image
 ```python
 python detect_oods.py --model vgg16 --ind cifar10
 ```
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/GM-git-dotcom/la_ood_cs640.svg?style=flat-square
+[contributors-url]: https://github.com/GM-git-dotcom/la_ood_cs640/graphs/contributors
+[stars-shield]: https://img.shields.io/github/stars/GM-git-dotcom/la_ood_cs640.svg?style=flat-square
+[stars-url]: https://github.com/GM-git-dotcom/la_ood_cs640/stargazers
+[issues-shield]: https://img.shields.io/github/issues/GM-git-dotcom/la_ood_cs640.svg?style=flat-square
+[issues-url]: https://github.com/GM-git-dotcom/la_ood_cs640/issues
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/gm-harshvardhan/
