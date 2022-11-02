@@ -1,4 +1,4 @@
-# la_ood_cs640
+# Layer Adaptive Out-of-Distribution detection for CS640
 LA-OOD implementation for CS640 project
 
 #Team members
