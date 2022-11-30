@@ -35,7 +35,7 @@
 In this project, we will be using Wang et. al (2022)'s  LA-OOD https://github.com/haoliangwang86/LA-OOD (paper: https://arxiv.org/pdf/2203.00192.pdf) for out-of-distribution detection on satellite images on So2Sat (https://github.com/zhu-xlab/So2Sat-LCZ42).
 
 
-# Implementation (preliminary)
+# Implementation
 The implementation pipeline is as follows:
 
 ## 1. Train the backbone models
