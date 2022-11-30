@@ -40,12 +40,13 @@ The implementation pipeline is as follows:
 
 ## 1. Train the backbone models
 ```python
-python train_backbone_model.py --model vgg16 --dataset cifar10
+python train_backbone_model.py --model vgg16 --dataset so2sat
 ```
 
 ## 2. Download the OOD datasets
 Download the following dataset:
-* Tiny ImageNet: https://image-net.org/index.php
+* (for preliminary) Tiny ImageNet: https://image-net.org/index.php
+* (for final results) Satellite imagery dataset: https://www.kaggle.com/datasets/mahmoudreda55/satellite-image-classification
 
 save the unzipped files in ./data folder
 
@@ -58,12 +59,12 @@ python generate_datasets.py
 
 ## 4. Save the intermedia outputs
 ```python
-python save_inter_outputs.py --model vgg16 --ind cifar10
+python save_inter_outputs.py --model vgg16 --ind so2sat
 ```
 
 ## 5. Train OOD detectors
 ```python
-python train_ood_detectors.py --model vgg16 --ind cifar10
+python train_ood_detectors.py --model vgg16 --ind so2sat
 ```
 
 The above step trains all the One-Class SVMs (OCSVMs) to detect whether an image is out-of-distribution or not.
@@ -71,7 +72,7 @@ The above step trains all the One-Class SVMs (OCSVMs) to detect whether an image
 
 ## 6. Test: OOD detection
 ```python
-python detect_oods.py --model vgg16 --ind cifar10
+python detect_oods.py --model vgg16 --ind so2sat
 ```
 
 
