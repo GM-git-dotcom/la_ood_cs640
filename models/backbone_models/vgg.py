@@ -93,6 +93,9 @@ def vgg16():
 def vgg16_cifar100():
     return VGG('VGG16', 100)
 
+def vgg16_so2sat():
+    return VGG('VGG16', 17)
+
 def test():
     net = VGG('VGG16', 10)
     x = torch.randn(2,3,32,32)
