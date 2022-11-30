@@ -9,4 +9,5 @@ RESNET34_LAYERS = range(34)
 DENSENET100_LAYERS = range(100)
 
 #OOD_LIST = ["lsun", "tiny", "svhn", "dtd", "pure_color"]
-OOD_LIST = ["tiny"]
+#OOD_LIST = ["tiny"] 
+OOD_LIST = ["satellite"]
