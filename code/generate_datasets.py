@@ -110,6 +110,36 @@ def get_data_loader(ds_name, is_training=False,
                 transforms.ToTensor(),
             ])),
             batch_size=batch_size)
+    
+    elif ds_name == "satellite":
+
+        from torchvision.datasets import ImageFolder
+        from torch.utils.data import DataLoader
+        from torchvision import transforms
+
+        INPUT_HEIGHT = 256
+        INPUT_WIDTH = 256
+
+        resize = transforms.Resize(size=(INPUT_HEIGHT,
+        INPUT_WIDTH))
+        hFlip = transforms.RandomHorizontalFlip(p=0.25)
+        vFlip = transforms.RandomVerticalFlip(p=0.25)
+        rotate = transforms.RandomRotation(degrees=15)
+
+        trainTransforms = transforms.Compose([resize, hFlip, vFlip, rotate, transforms.ToTensor()])
+        
+        
+        trainDataset = ImageFolder(root='./data/satellite(ood)/data/clouds_and_desert',
+        transform=trainTransforms)
+
+        data_loader = DataLoader(trainDataset, batch_size = batch_size, shuffle=True)
+
+        data_loader = DataLoader(
+            datasets.LSUN(root='./data', classes='test', transform=transforms.Compose([
+                transforms.Resize([32, 32], interpolation=InterpolationMode.LANCZOS),
+                transforms.ToTensor(),
+            ])),
+            batch_size=batch_size)
 
     return data_loader
 
