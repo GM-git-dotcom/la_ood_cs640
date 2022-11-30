@@ -80,6 +80,8 @@ def save_inter_outputs(model_name, id_name, ds_name=None, is_training_set=False)
         elif id_name == "cifar10":
             model = vgg.vgg16().cuda()
             #model = vgg.vgg16()
+        elif id_name == "so2sat":
+            model = vgg.vgg16_so2sat().cuda()
     elif model_name == "resnet34":
         if id_name == "cifar100":
             model = resnet.ResNet34_cifar100().cuda()
